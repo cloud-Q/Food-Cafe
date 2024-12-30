@@ -373,6 +373,33 @@ nav {
     text-align: center;
 }
 
+@media (max-width:688px) {
+    .foodMenu{
+        height: 400px;
+    }
+    .card1{
+        width: 40%;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .imageContainer{
+        height: max-content;
+    }
+    
+}
+
+@media (max-width:330px) {
+    .card1{
+        width: 80%;
+        font-size: 20px;
+        
+    }
+    .foodMenu{
+        height: 1150px;
+    }
+}
+
+
 .card1 > img{
     width: 100%;
     height: 90%;
@@ -494,6 +521,12 @@ footer{
     width: 400px;
     background: #fff;
     margin-left: auto;
+}
+
+@media (max-width:400px) {
+    .formContent{
+        width:100%;
+    }
 }
 
 

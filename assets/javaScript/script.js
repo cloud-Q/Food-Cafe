@@ -95,7 +95,10 @@ function tea() {
     document.querySelector("#box2").style.display = "none";
     document.querySelector("#box3").style.display = "none";
 }
-
+// function all(){
+//     document.querySelector(".table").style.display = "block";
+//     document.querySelector(".table").style.position = "relative";
+// }
 
 // form validation
 function validateForm() {
