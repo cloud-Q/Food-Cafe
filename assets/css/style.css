@@ -199,6 +199,7 @@ nav {
 .imageSlider{
     height: 80vh;
     margin: 5%;
+    margin-top: 0;
 }
 .carousel{
     width: 100%;
