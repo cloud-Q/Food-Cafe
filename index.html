@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Cafe</title>
+    <!-- Font for website -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- font awsome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- External Css file link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- java-script link -->
+    <!-- <script src="assets/javaScript/script.js"></script> -->
+</head>
+
+<body>
+    <header>
+        <div class="section" id="socMediaSec">
+            <span>follow on:</span>
+            <ul class="socialLinks">
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <div class="section" id="title">
+            <h1>food cafe</h1>
+        </div>
+        <div class="section" id="options">
+            <span class="langIcon"><i class="fa-solid fa-language"></i></span>
+            <select class="language">
+                <option value="english">English</option>
+                <option value="italian">Italian</option>
+                <option value="french">French</option>
+                <option value="spanish">Spanish</option>
+                <option value="polish">Polish</option>
+            </select>
+            <span class="login" onclick="loginshow()">Login</span>
+        </div>
+    </header>
+    <nav>
+        <ul class="navList">
+            <li onclick="toggleDropdown('dropdown-1')">
+                <a href="#">Home</a>
+                <ul class="dropdown dropdown-1">
+                    <li><a href="#">home 1</a></li>
+                    <li><a href="#">home 2</a></li>
+                    <li><a href="#">home 3</a></li>
+                </ul>
+            </li>
+            <li onclick="toggleDropdown('dropdown-2')">
+                <a href="#">About Us</a>
+                <ul class="dropdown dropdown-2">
+                    <li><a href="#">about 1</a></li>
+                    <li><a href="#">about 2</a></li>
+                    <li><a href="#">about 3</a></li>
+                </ul>
+            </li>
+            <li onclick="toggleDropdown('dropdown-3')">
+                <a href="#">Services</a>
+                <ul class="dropdown dropdown-3">
+                    <li><a href="#">service 1</a></li>
+                    <li><a href="#">service 2</a></li>
+                    <li><a href="#">service 3</a></li>
+                </ul>
+            </li>
+            <li onclick="toggleDropdown('dropdown-4')">
+                <a href="#">Gallery</a>
+                <ul class="dropdown dropdown-4">
+                    <li><a href="#">gallery 1</a></li>
+                    <li><a href="#">gallery 2</a></li>
+                    <li><a href="#">gallery 3</a></li>
+                </ul>
+            </li>
+            <li onclick="toggleDropdown('dropdown-5')">
+                <a href="#">Contact Us</a>
+                <ul class="dropdown dropdown-5">
+                    <li><a href="#">contact 1</a></li>
+                    <li><a href="#">contact 2</a></li>
+                    <li><a href="#">contact 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Carousel section -->
+    <section class="imageSlider">
+        <div class="carousel">
+            <buttons class="carouselButton prev" onclick="prev()">&#8678;</buttons>
+            <buttons class="carouselButton next" onclick="next()">&#8680;</buttons>
+            <ul class="imgContainer">
+                <li class="slide" data-active><img src="assets/images/banner-1.jpg" alt="sea food image" id="photo1"
+                        class="active"></li>
+                <li class="slide"><img src="assets/images/banner-2.jpg" alt="another sea food image" id="photo2"></li>
+                <li class="slide"><img src="assets/images/banner-3.jpg" alt="chinese food image" id="photo3"></li>
+            </ul>
+        </div>
+    </section>
+    <section class="services">
+        <div class="container">
+            <div class="allBtn">
+                <button onclick="home()">Home</button>
+                <button onclick="service()">Service</button>
+                <button onclick="contact()">Contact</button>
+            </div>
+            <div class="servicesImg">
+                <img src="assets/images/tab-1.jpg" alt="home Tab image" id="image5">
+                <img src="assets/images/tab-2.jpg" alt="service Tab image" id="image6">
+                <img src="assets/images/tab-3.jpg" alt="contact Tab image" id="image7">
+            </div>
+        </div>
+    </section>
+
+    <!-- food menu section -->
+    <section class="foodMenu">
+        <div class="foodContainer">
+            <div class="foodBtn">
+                <button onclick="coffee()">Coffee</button>
+                <button onclick="drink()">Cold Drinks</button>
+                <button onclick="fastfood()">Fast Food</button>
+                <button onclick="tea()">Tea</button>
+                <button onclick="all()">All</button>
+            </div>
+            <div class="imageContainer">
+                <div class="table" id="box1">
+                    <div class="card1">
+                        <img src="assets/images/coffee-1.jpg" alt="coffee">
+                        <h4>Cappuccino</h4>
+                    </div>
+                    <div class="card1">
+                        <img src="assets/images/coffee-2.jpg" alt="coffee">
+                        <h4>Espresso</h4>
+                    </div>
+                    <div class="card1">
+                        <img src="assets/images/coffee-3.jpg" alt="coffee">
+                        <h4>Caffe Latte</h4>
+                    </div>
+                    <div class="card1">
+                        <img src="assets/images/coffee-4.jpg" alt="coffee">
+                        <h4>Cold brew</h4>
+                    </div>
+                </div>
+                <div class="table" id="box2">
+                    <div class="card1">
+                        <img src="assets/images/drink-1.jpg" alt="coffee">
+                        <h4>Cappuccino</h4>
+                    </div>
+                    <div class="card1">
+                        <img src="assets/images/drink-2.jpg" alt="coffee">
+                        <h4>Espresso</h4>
+                    </div>
+                    <div class="card1">
+                        <img src="assets/images/drink-3.jpg" alt="coffee">
+                        <h4>Caffe Latte</h4>
+                    </div>
+                    <div class="card1">
+                        <img src="assets/images/drink-4.jpg" alt="coffee">
+                        <h4>Cold brew</h4>
+                    </div>
+                </div>
+                <div class="table" id="box3">
+                    <div class="card1">
+                        <img src="assets/images/fast-1.avif" alt="coffee">
+                        <h4>Cappuccino</h4>
+                    </div>
+                    <div class="card1">
+                        <img src="assets/images/fast-2.jpg" alt="coffee">
+                        <h4>Espresso</h4>
+                    </div>
+                    <div class="card1">
+                        <img src="assets/images/fast-3.jpg" alt="coffee">
+                        <h4>Caffe Latte</h4>
+                    </div>
+                    <div class="card1">
+                        <img src="assets/images/fast-4.jpg" alt="coffee">
+                        <h4>Cold brew</h4>
+                    </div>
+                </div>
+                <div class="table" id="box4">
+                    <div class="card1">
+                        <img src="assets/images/tea-1.jpg" alt="coffee">
+                        <h4>Cappuccino</h4>
+                    </div>
+                    <div class="card1">
+                        <img src="assets/images/tea-2.jpg" alt="coffee">
+                        <h4>Espresso</h4>
+                    </div>
+                    <div class="card1">
+                        <img src="assets/images/tea-3.webp" alt="coffee">
+                        <h4>Caffe Latte</h4>
+                    </div>
+                    <div class="card1">
+                        <img src="assets/images/tea-4.jpg" alt="coffee">
+                        <h4>Cold brew</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get in touch Form -->
+    <section class="contact">
+        <div class="contactCont">
+            <h2>Get in touch</h2>
+            <form class="contactForm" onsubmit="return validateForm()">
+                <div class="newcell">
+                    <div class="cell nameCell">
+                        <input type="text" placeholder="Name" name="name" id="name">
+                        <div id="error1"></div>
+                    </div>
+                    <div class="cell emailCell">
+                        <input type="text" placeholder="E-Mail" id="email">
+                        <div id="error2"></div>
+                    </div>
+                </div>
+                <div class="cell passCell">
+                    <input type="password" placeholder="Password" id="password">
+                    <div id="error3"></div>
+                </div>
+                <div class="cell messageCell">
+                    <textarea name="discription" id="description" placeholder="Your Message"></textarea>
+                </div>
+                <div class="submitCell">
+                    <input type="submit" value="Submit" class="cellSubmitBtn">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <footer>
+        <div class="footerContainer">
+            <button>our story</button>
+            <button>mission</button>
+            <button>vision</button>
+        </div>
+    </footer>
+
+    <div class="form">
+        <div class="formContent">
+        <h1>Login</h1>
+        <div class="closeIcon" onclick="hide()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <form>
+            <div class="name part-1">
+            <input type="text" id="loginName" onkeyup="first()" placeholder="Name">
+            </div>
+            <div class="pass part-1">
+                <input type="password" id="loginPassword" onkeyup="last()" placeholder="password">
+            </div>
+            <span class="err" id="loginError"></span>
+            
+            <input type="submit" id="btn" onclick="return vallidate()">
+        </form>
+    </div>
+</div>
+<!-- java-script link -->
+<script src="assets/javaScript/script.js"></script>
+</body>
+
+</html>

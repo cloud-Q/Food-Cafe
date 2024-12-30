@@ -1,0 +1,548 @@
+/* font families */
+/* font-family: "Open Sans", serif;
+font-family: "DM Sans", serif;
+font-family: "Poppins", serif; */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2690BF;
+    padding: 1%;
+}
+
+/* social media Section CSS */
+#socMediaSec{
+    display: flex;
+    gap: 30px;
+    color: white;
+}
+#socMediaSec > span{
+    text-transform: capitalize;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.socialLinks{
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.socialLinks > li{
+    list-style: none;
+    width: max-content;
+    border: 0.015rem solid rgba(255, 255, 255, 0.397);
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: none;
+    border-bottom: none;
+}
+.socialLinks > li:hover{
+    background-color: rgba(255, 179, 0, 0.689);
+}
+.socialLinks > li > a {  
+    color: white;
+    
+}
+.socialLinks > li > a> i{
+    font-size: 15px;
+}
+
+/* title css */
+#title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#title > h1{
+    text-transform: uppercase;
+    color: white;
+    font-size: 40px;
+}
+
+/* option menu css */
+#options{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 18px;
+    color: white;
+   
+}
+#options > span{
+    height: max-content;
+    border: 0.015rem solid rgba(255, 255, 255, 0.311);
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: none;
+    border-bottom: none;
+}
+#options > span > i{
+    font-size: 20px;
+}
+#options > .langIcon{
+    border: none;
+    position: relative;
+    left: 40px;
+}
+#options > .langIcon > i{
+    font-size: 20px;
+}
+select{
+    appearance: none; /* remove default appearance set by the browser */
+    outline: none; /* remove the outline shown on focus */
+    cursor: pointer; /* change the mouse cursor icon */
+
+        color: white; 
+        background-color: #2690BF;
+        border: none;
+
+        border-radius: 5px;  
+        padding: 5px 5px;
+        margin: 0 10px;
+        width: 90px;
+        
+       
+
+        
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+
+
+@media (max-width:805px) {
+    header{
+        display: block;
+        padding: 3%;
+    }
+}
+ /* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.navList {
+    display: flex;
+}
+.navList > li {
+    list-style: none;
+    margin-left: 18px;
+    position: relative;
+}
+.navList > li > a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+.navList > li > a:hover {
+    color: rgba(255, 179, 0, 0.689);
+}
+.dropdown {
+    padding-left: 10px;
+    text-transform: capitalize;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    border: 2px solid #2690BF;
+    border-left: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-radius: 3px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.11);
+    z-index: 50;
+}
+.dropdown li {
+    list-style: none;
+}
+.dropdown li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px 0;
+}
+
+
+
+/* carousel Styling */
+.imageSlider{
+    height: 80vh;
+    margin: 0;
+}
+.carousel{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+.slide > img{
+    /* position: absolute;
+    top: 0; */
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.active{
+    display: block;
+}
+
+.slide[data-active]{
+    opacity: 1;
+}
+
+.carouselButton{
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    top: 50%;
+    transform: translate(50%);
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: .25rem;
+    padding: .3rem .3rem;
+    background-color: rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+.carouselButton:hover,
+.carouselButton:focus{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carouselButton.prev{
+    left: 1rem;
+}
+.carouselButton.next{
+    right: 3rem;
+}
+
+/* services section css */
+.services{
+    margin: 5% 5%;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 600px;
+    /* background-color: black; */
+}
+
+.allBtn{
+    /* background-color: black; */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.allBtn > button{
+    cursor: pointer;
+    padding: 15px 25px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #2690BF;
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+
+}
+
+.servicesImg{
+    /* background-color: black; */
+    height: 80%;
+    width: 80%;
+    margin: 2% 5%;
+    position: relative;
+}
+
+.servicesImg > img{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: max-content;
+    object-fit: fill;
+    border-radius: 2px;
+}
+
+#image5{
+    display: block;
+}
+
+/* food SectionMenu CSS */
+.foodMenu{
+    /* background-color: black; */
+    margin: 1%;
+}
+
+.foodContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.foodBtn{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.foodBtn > button{
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: lightblue;
+    color: #2690BF;
+    border: 3px solid #2690BF;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.imageContainer{
+    margin: 3% 5%;
+    width: 100%;
+    position: relative;
+}
+
+.table{
+    display: none;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: absolute;
+
+}
+#box1{
+    display: flex;
+}
+
+.card1{
+    height: 350px;
+    width: 20%;
+    background-color: rgba(213, 213, 213, 0.573);
+    padding: 2%;
+    font-size: 20px;
+    border-radius: 14px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.315) ;
+    text-align: center;
+}
+
+.card1 > img{
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px;
+}
+
+
+/* contact form css */
+
+.contact{
+    position: relative;
+    background: url(../images/contact-bg.jpg);
+    margin-top: 450px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.contactCont{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    padding: 5%;
+    margin: 0 5%;
+    width: 40%;
+}
+.nameCell{
+    display: flex;
+    flex-direction: column;
+}
+
+.cell > input{
+    width: 100%;
+    height: 40px;
+    margin: 20px 0;
+    padding: 20px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+}
+
+.newcell{
+    display: flex;
+    gap: 20px;
+}
+.cell > textarea{
+    width: 100%;
+    height: 100px;
+    margin: 20px 0;
+    padding: 15px 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.cellSubmitBtn{
+    padding: 15px 20px;
+    margin-top: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #2690BF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#error1,#error2,#error3,#error4{
+    color: red;
+}
+/* footer section css */
+footer{
+    margin: 5% 5%;
+}
+
+.footerContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.footerContainer > button{
+    width: 250px;
+    height: max-content;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: rgb(0 0 0 / 40%);
+    width: 0;
+    animation: move 0.5s ease;
+}
+
+@keyframes move{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+
+}
+
+.formContent{
+    padding: 40px 30px;
+    height: 100%;
+    width: 400px;
+    background: #fff;
+    margin-left: auto;
+}
+
+
+.formContent > h1{
+    font-size: 30px;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+.part-1{
+    margin: 20px;
+}
+
+.part-1> input{
+    padding: 12px 10px;
+    width: 250px;
+    font-size: 15px;
+}
+
+#btn{
+    padding: 10px 15px;
+    font-size: medium;background-color: #2690BF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    left: 22px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#loginError, .err{
+	font-size: 16px;
+	color: red;
+	font-weight: 500;
+	display: block;
+	margin-bottom: 20px;
+    z-index: 200;
+}
+.closeIcon {
+    width: 30px;
+    height: 30px;
+    background: #2690bf;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: 17px;
+    right: 16px;
+    cursor: pointer;
+}
