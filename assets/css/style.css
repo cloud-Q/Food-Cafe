@@ -153,6 +153,16 @@ nav {
     color: black;
     font-size: 1.2rem;
 }
+@media (max-width:460px) {
+    .navList {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .navList > li {
+        padding: 5px;
+        margin-top: 5px;
+    }
+}
 .navList > li > a:hover {
     color: rgba(255, 179, 0, 0.689);
 }
@@ -188,7 +198,7 @@ nav {
 /* carousel Styling */
 .imageSlider{
     height: 80vh;
-    margin: 0;
+    margin: 5%;
 }
 .carousel{
     width: 100%;
@@ -229,20 +239,22 @@ nav {
     z-index: 2;
     background: none;
     border: none;
-    font-size: 3rem;
-    top: 50%;
+    font-size: 30px;
+    top: 40%;
     transform: translate(50%);
-    color: rgba(255, 255, 255, 0.5);
+    color: white;
     border-radius: .25rem;
-    padding: .3rem .3rem;
-    background-color: rgba(0, 0, 0, .1);
+    padding: 5px 10px;
+    background-color: #2690BF;
+    /* background-color: rgba(0, 0, 0, .1); */
     cursor: pointer;
 }
 
 .carouselButton:hover,
 .carouselButton:focus{
     color: white;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #2690BF;
+    /* background-color: rgba(0, 0, 0, 0.2); */
 }
 
 .carouselButton.prev{
